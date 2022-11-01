@@ -6,10 +6,21 @@
 /*   By: eberger <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 14:55:43 by eberger           #+#    #+#             */
-/*   Updated: 2022/10/31 15:06:35 by eberger          ###   ########.fr       */
+/*   Updated: 2022/11/01 10:49:46 by eberger          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	*ft_memset(void *s, int c, size_t n)
 {
+	size_t	i;
+	char	*str;
+
+	i = 0;
+	str = s;
+	while (i < n)
+	{
+		str[i] = (unsigned char)c;
+		i++;
+	}
+	return (str);
 }

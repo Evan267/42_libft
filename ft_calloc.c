@@ -1,21 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eberger <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/31 12:26:26 by eberger           #+#    #+#             */
-/*   Updated: 2022/11/01 10:14:18 by eberger          ###   ########.fr       */
+/*   Created: 2022/11/01 08:58:21 by eberger           #+#    #+#             */
+/*   Updated: 2022/11/01 15:24:18 by eberger          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(int chr)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	int	value;
-
-	value = 1;
-	if (chr < 0 || chr > 127)
-		value = 0;
-	return (value);
+	void	*ptr;
+	ptr = malloc(nmemb * size);
+	if (ptr)
+		bzero(ptr, nmemb * size);
+	return (ptr);
 }

@@ -1,21 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eberger <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/31 12:26:26 by eberger           #+#    #+#             */
-/*   Updated: 2022/11/01 10:14:18 by eberger          ###   ########.fr       */
+/*   Created: 2022/11/01 15:04:36 by eberger           #+#    #+#             */
+/*   Updated: 2022/11/01 15:11:00 by eberger          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(int chr)
+char	*ft_strdup(char *src)
 {
-	int	value;
+	int		src_len;
+	char	*str;
+	int		i;
 
-	value = 1;
-	if (chr < 0 || chr > 127)
-		value = 0;
-	return (value);
+	src_len = ft_strlen(src);
+	str = malloc(src_len + 1);
+	if (str == 0)
+		return (0);
+	i = 0;
+	while (src[i])
+	{
+		str[i] = src[i];
+		i++;
+	}
+	str[i] = 0;
+	return (str);
 }

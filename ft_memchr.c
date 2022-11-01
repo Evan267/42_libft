@@ -6,11 +6,22 @@
 /*   By: eberger <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 16:29:24 by eberger           #+#    #+#             */
-/*   Updated: 2022/10/31 16:30:32 by eberger          ###   ########.fr       */
+/*   Updated: 2022/11/01 14:33:09 by eberger          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*memchr(const void *s, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
+	char	*src;
+	int		i;
 
+	src = s;
+	i = 0;
+	while (i < n)
+	{
+		if (src[i] == c)
+			return (src[i]);
+		i++;
+	}
+	return (0);
 }
