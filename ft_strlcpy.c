@@ -6,25 +6,17 @@
 /*   By: eberger <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 15:15:30 by eberger           #+#    #+#             */
-/*   Updated: 2022/10/31 15:25:55 by eberger          ###   ########.fr       */
+/*   Updated: 2022/11/05 13:14:48 by eberger          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
-{
-	int	i;
+#include "libft.h"
 
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
-
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+size_t	ft_strlcpy(char *restrict dest, const char *restrict src, size_t size)
 {
-	unsigned int	src_len;
-	unsigned int	len;
-	unsigned int	i;
+	size_t	src_len;
+	size_t	len;
+	size_t	i;
 
 	src_len = ft_strlen(src);
 	i = 0;
@@ -32,7 +24,7 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 	if (size > 0)
 	{
 		if (src_len < size)
-			len =  src_len;
+			len = src_len;
 		while (i < len)
 		{
 			dest[i] = src[i];

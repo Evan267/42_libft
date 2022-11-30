@@ -6,11 +6,13 @@
 /*   By: eberger <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 15:04:36 by eberger           #+#    #+#             */
-/*   Updated: 2022/11/01 15:11:00 by eberger          ###   ########.fr       */
+/*   Updated: 2022/11/04 14:36:51 by eberger          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strdup(char *src)
+#include "libft.h"
+
+char	*ft_strdup(const char *src)
 {
 	int		src_len;
 	char	*str;
@@ -23,7 +25,7 @@ char	*ft_strdup(char *src)
 	i = 0;
 	while (src[i])
 	{
-		str[i] = src[i];
+		str[i] = (char)src[i];
 		i++;
 	}
 	str[i] = 0;
