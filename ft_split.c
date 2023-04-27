@@ -6,14 +6,14 @@
 /*   By: eberger <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 14:52:59 by eberger           #+#    #+#             */
-/*   Updated: 2022/11/30 11:47:42 by eberger          ###   ########.fr       */
+/*   Updated: 2023/03/21 10:55:54 by eberger          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-char	**ft_clear(char **ret)
+static char	**ft_clear(char **ret)
 {
 	int	i;
 

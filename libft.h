@@ -6,13 +6,14 @@
 /*   By: eberger <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/06 15:31:34 by eberger           #+#    #+#             */
-/*   Updated: 2022/11/06 15:33:43 by eberger          ###   ########.fr       */
+/*   Updated: 2023/04/24 12:19:18 by eberger          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <stdlib.h>
+# include "ft_printf.h"
 
 typedef struct s_list
 {
